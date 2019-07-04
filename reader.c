@@ -6,13 +6,13 @@
 /*   By: rrosaura <rrosaura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/27 16:10:24 by rrosaura          #+#    #+#             */
-/*   Updated: 2019/07/04 17:10:49 by rrosaura         ###   ########.fr       */
+/*   Updated: 2019/07/04 17:23:55 by rrosaura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-void	min_max(char *str, t_point *min, t_point *max)
+void		min_max(char *str, t_point *min, t_point *max)
 {
 	int	i;
 
@@ -60,7 +60,7 @@ t_etris		*get_figure(char *str, char value)
 	return (tetri);
 }
 
-int		check_figure(char *str)
+int			check_figure(char *str)
 {
 	int	i;
 	int	blocks;
@@ -85,7 +85,7 @@ int		check_figure(char *str)
 	return (blocks == 6 || blocks == 8);
 }
 
-int		validator(char *str, int count)
+int			validator(char *str, int count)
 {
 	int	i;
 	int	blocks;
@@ -100,7 +100,7 @@ int		validator(char *str, int count)
 				return (1);
 			if (str[i] == '#' && ++blocks > 4)
 				return (1);
-		}	
+		}
 		else if (str[i] != '\n')
 			return (1);
 		i++;
@@ -112,7 +112,7 @@ int		validator(char *str, int count)
 	return (0);
 }
 
-t_list	*ft_read_file(int fd)
+t_list		*ft_read_file(int fd)
 {
 	char	*buf;
 	int		count;

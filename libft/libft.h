@@ -6,7 +6,7 @@
 /*   By: rrosaura <rrosaura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 16:04:13 by rrosaura          #+#    #+#             */
-/*   Updated: 2019/07/02 14:03:38 by rrosaura         ###   ########.fr       */
+/*   Updated: 2019/07/04 17:15:34 by rrosaura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void				ft_lstrev(t_list **alst);
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-size_t      		ft_lstcount(t_list *lst);
+size_t				ft_lstcount(t_list *lst);
 
 char				*ft_strtoupper(char *str);
 char				*ft_strtolower(char *str);
