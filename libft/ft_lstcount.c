@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrosaura <rrosaura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/11 13:30:46 by rrosaura          #+#    #+#             */
-/*   Updated: 2019/07/04 17:03:03 by rrosaura         ###   ########.fr       */
+/*   Created: 2019/07/02 14:01:24 by rrosaura          #+#    #+#             */
+/*   Updated: 2019/07/02 14:03:25 by rrosaura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+size_t  ft_lstcount(t_list *lst)
 {
-	t_list	*tmp;
+    size_t  i;
 
-	if (!alst || !*alst || !del)
-		return ;
-	tmp = *alst;
-	while (tmp != NULL)
-	{
-		(*alst) = (*alst)->next;
-		ft_lstdelone(&tmp, del);
-		tmp = *alst;
-	}
+    i = 0;
+    while (lst != NULL)
+    {
+        lst = lst->next;
+        i++;
+    }
+    return (i);
 }

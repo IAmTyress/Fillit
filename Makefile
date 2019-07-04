@@ -6,7 +6,7 @@
 #    By: kzina <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/30 12:09:39 by kzina             #+#    #+#              #
-#    Updated: 2019/06/27 15:58:13 by rrosaura         ###   ########.fr        #
+#    Updated: 2019/07/02 14:40:22 by rrosaura         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = fillit
 
 FLAGS = -Wall -Werror -Wextra -I libft/
 
-SRCS = *.c
+SRCS = main.c map.c reader.c solve_tetrim.c tetrims.c
 
 LIBFT = libft/libft.a
 
