@@ -6,7 +6,7 @@
 /*   By: rrosaura <rrosaura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/27 16:10:24 by rrosaura          #+#    #+#             */
-/*   Updated: 2019/07/04 17:35:58 by rrosaura         ###   ########.fr       */
+/*   Updated: 2019/07/05 16:14:26 by rrosaura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ t_list		*ft_read_file(int fd)
 	cur = 'A';
 	while ((count = read(fd, buf, 21)) >= 20)
 	{
-		if (validator(buf, count) != 0
+		if (validator(buf, count) != 0 || cntr() > 26
 				|| (tetris = get_figure(buf, cur++)) == NULL)
 		{
 			ft_memdel((void **)&buf);

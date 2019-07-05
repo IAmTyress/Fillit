@@ -6,7 +6,7 @@
 /*   By: rrosaura <rrosaura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/27 16:20:26 by rrosaura          #+#    #+#             */
-/*   Updated: 2019/07/04 17:16:57 by rrosaura         ###   ########.fr       */
+/*   Updated: 2019/07/05 16:21:31 by rrosaura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ typedef struct	s_etris
 	char		value;
 }				t_etris;
 
+int				cntr(void);
+int				check_last_n(int fd);
 int				main(int ac, char **av);
 
 t_list			*ft_read_file(int fd);
